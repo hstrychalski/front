@@ -31,7 +31,6 @@ $(document).ready(function() {
 
 
         $('#input-Score').hide();
-        $('#input-Link').hide();
     }
 
 
@@ -48,9 +47,9 @@ $(document).ready(function() {
         let tbody = table.children[1];
         let row = tbody.insertRow();
 
-        let nameCell = row.insertCell();
-        let nameTextNode = document.createTextNode(JSON.stringify(company.details));
-        nameCell.appendChild(nameTextNode);
+        // let nameCell = row.insertCell();
+        // let nameTextNode = document.createTextNode(JSON.stringify(company.details));
+        // nameCell.appendChild(nameTextNode);
 
         let scoreCell = row.insertCell();
         let scoreTextNode = document.createTextNode(company.score);
