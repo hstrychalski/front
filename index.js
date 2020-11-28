@@ -118,6 +118,18 @@ $(document).ready(function() {
         let linkText = document.createTextNode(company.name);
         link.appendChild(linkText);
         linkCell.appendChild(link);
+
+        let descriptionCell = row.insertCell();
+        let descriptionCellNode = document.createTextNode('Description placeholder');
+        descriptionCell.appendChild(descriptionCellNode);
+
+        let alertTypeCell = row.insertCell();
+        let alertTypeCellNode = document.createTextNode('Alert type placeholder');
+        alertTypeCell.appendChild(alertTypeCellNode);
+
+        let sourceCell = row.insertCell();
+        let sourceCellNode = document.createTextNode('Source placeholder');
+        sourceCell.appendChild(sourceCellNode);
     }
 
     function clearTable() {
@@ -136,7 +148,7 @@ $(document).ready(function() {
                 })
             })
             .then(function() {
-               initDataTable();
+                initDataTable();
             });
     }
 
