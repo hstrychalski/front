@@ -23,7 +23,8 @@ $(document).ready(function() {
                         }
                     } );
                 } );
-            }
+            },
+            "paging": false
         });
     }
 
