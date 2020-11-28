@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     const TABLE_ID = 'example';
-    const DATA_SOURCE_URL = 'url-placeholder';
+    const DATA_SOURCE_URL = '/alert';
 
     function initDataTable()
     {
@@ -49,7 +49,7 @@ $(document).ready(function() {
         let row = tbody.insertRow();
 
         let nameCell = row.insertCell();
-        let nameTextNode = document.createTextNode(company.name);
+        let nameTextNode = document.createTextNode(JSON.stringify(company.details));
         nameCell.appendChild(nameTextNode);
 
         let scoreCell = row.insertCell();
@@ -58,21 +58,21 @@ $(document).ready(function() {
 
         let linkCell = row.insertCell();
         let link = document.createElement("a");
-        link.setAttribute("href", company.link);
-        let linkText = document.createTextNode(company.name);
+        link.setAttribute("href", company.url);
+        let linkText = document.createTextNode(company.url);
         link.appendChild(linkText);
         linkCell.appendChild(link);
 
         let descriptionCell = row.insertCell();
-        let descriptionCellNode = document.createTextNode('Description placeholder');
+        let descriptionCellNode = document.createTextNode(company.description);
         descriptionCell.appendChild(descriptionCellNode);
 
         let alertTypeCell = row.insertCell();
-        let alertTypeCellNode = document.createTextNode('Alert type placeholder');
+        let alertTypeCellNode = document.createTextNode(company.alertType);
         alertTypeCell.appendChild(alertTypeCellNode);
 
         let sourceCell = row.insertCell();
-        let sourceCellNode = document.createTextNode('Source placeholder');
+        let sourceCellNode = document.createTextNode(company.source);
         sourceCell.appendChild(sourceCellNode);
     }
 
